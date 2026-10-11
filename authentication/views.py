@@ -74,7 +74,6 @@ def logout_view(request):
         return JsonResponse({
             "message": 'logout successfully'
         }, status=200)
-        
     except AttributeError:
         return JsonResponse({
             "error": "user not authenticeted"
