@@ -38,7 +38,10 @@ def sign_in(request):
             return  JsonResponse({
                 "message ": "user is not verified ", "CurrentUser": current_user
             }, status= 400)
-            
+        if user.is_active == False:
+            return JsonResponse({
+                "message ": "user is not active"
+            }, status = 400)     
         if user_auth:
             login(request, user)
             # creat token 
