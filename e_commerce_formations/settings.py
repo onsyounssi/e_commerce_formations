@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'authentication',
     'users',
     'category',
+    'products'
 ]
 
 MIDDLEWARE = [
@@ -123,6 +124,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# URL used to access media files through the browser
+MEDIA_URL = 'media/'
+
+# Absolute filesystem path to the directory where user-uploaded files are stored
+MEDIA_ROOT = BASE_DIR / 'media'
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
